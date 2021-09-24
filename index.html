@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cash register app</title>
+    <link rel="stylesheet" href="style.css"></link>
+</head>
+<body>
+    <header>
+        <h1>Cash register app</h1>
+    </header>
+    <form>
+        <label for="bill-input">Bill amount:</label>
+        <input id="bill-input" type="number">
+        <label for="money-received">Amount recieved</label>
+        <input id="money-received" type="number">
+        <button class="cash-button">Submit</button>
+        <div style="display: none;" class="message"></div>
+    </form>
+
+    <div>
+        <table>
+            <tr>
+                <th class="num-note"></th">
+                <th class="num-note"></th>
+                <th class="num-note"></th>
+                <th class="num-note"></th>
+                <th class="num-note"></th>
+                <th class="num-note"></th>
+                <th class="num-note"></th>
+            </tr>
+            <tr>
+                <td class="currency-note">2000</td>
+                <td class="currency-note">500</td>
+                <td class="currency-note">100</td>
+                <td class="currency-note">20</td>
+                <td class="currency-note">10</td>
+                <td class="currency-note">5</td>
+                <td class="currency-note">1</td>
+            </tr>
+        </table>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+#bill-input {
+    display: block;
+}
+
+#money-received {
+    display: block;
+}
+
+form {
+    width: 60vw;
+    margin: auto;
+}
+
+table {
+    width: 80vw;
+    margin: auto; 
+    border-width: 5px;
+    border-color: green; 
+    background-color: aliceblue;  
+}
+
+th {
+    border-width: 2rem;
+    border-color: green;
+    padding: 2rem 1rem;
+}
+
+td {
+    border-color: green;
+    border-width: 2px;
+}
