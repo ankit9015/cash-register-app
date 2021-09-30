@@ -1,31 +1,110 @@
-#bill-input {
-    display: block;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@500&display=swap');
+
+* {
+    margin: 0px;
+    padding: px;
 }
 
-#money-received {
-    display: block;
+:root {
+    --primary-color: #ed9e5c;
+    --secondary-color: rgb(60, 109, 182);
+    --box-background: rgb(240, 234, 234);
 }
 
-form {
-    width: 60vw;
+body {
+    background-color: #f4f2ff;
+    font-family: 'Noto Sans Display', sans-serif;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: rgb(255, 255, 255);
+    padding: 2rem;
+    margin: 0 5vw 2rem 5vw;
+    border-bottom-left-radius: 3rem;
+    border-bottom-right-radius: 3rem;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+
+
+p {
+    margin: 0.5rem;
+    text-align: center;
+    font-size: x-large;
+    color: var(--secondary-color);
+}
+
+.input-div {
+    margin: 2rem 5rem 1rem 5rem;
+    text-align: center;
+    padding: 0.5rem;
+    background-color: var(--box-background);
+    border-radius: 3rem;
+}
+
+input {
+    padding: 1rem 3rem;
+    border-radius: 1rem;
+    border-color: var(--secondary-color);
+    margin: 0.5rem auto;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.5rem 2rem;
     margin: auto;
+    display: block;
+    border-radius: 1rem;
+    border-width: 3px;
+    font-size: large;
 }
+
+.message {
+    display: none;
+}
+
 
 table {
-    width: 80vw;
-    margin: auto; 
+    width: 70vw;
+    margin: 2rem auto; 
     border-width: 5px;
-    border-color: green; 
-    background-color: aliceblue;  
+    background-color: var(--box-background);
 }
 
-th {
-    border-width: 2rem;
-    border-color: green;
+table,
+th,
+td {
+    border: 1px solid white;
+    border-width: 4px;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    text-align: left;
+    color: var(--secondary-color);
     padding: 2rem 1rem;
 }
 
-td {
-    border-color: green;
-    border-width: 2px;
+
+footer {
+    margin-top: 2rem;
+    padding: 2rem;
+    text-align: center;
+}
+
+a,
+img,
+alt {
+    padding: 1rem 0.5rem;
+}
+
+img {
+    width: 30px;
+    height: 30px;
 }
