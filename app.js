@@ -10,25 +10,36 @@ function getMessage (text) {
 };
 
 function checkBill (billValue) {
-    if (billValue) {
+    if (billValue >= 0) {
         return        
     } else {
-        getMessage("Please enter valid Bill Amount");
+        getMessage("The Bill Amount can not be negative or empty.");
     }
 };
 
 function checkMoneyReceived (billValue, moneyReceived) {
-    if (moneyReceived && billValue) {
-        if (moneyReceived >= billValue) {
+    if (moneyReceived > 0 && billValue > 0) {
+        if (moneyReceived > billValue) {
             pickCashNote (billValue, moneyReceived);
+            getMessage("");
+        } else if (moneyReceived === billValue) {
+            refreshTable();
+            getMessage("No cash to return");
         } else {
-            getMessage("You have not paid the whole bill");
+            refreshTable();
+            getMessage("You are short on cash");
         }
     } else {
+        refreshTable();
         getMessage("Please enter a valid Amount");
     }    
 };
 
+function refreshTable() {
+    for (var i=0; i < numNote.length; i++) {
+        numNote[i].innerText = "";
+    }
+}
 
 function pickCashNote (bill, cash) {
     var moneyGive = cash - bill;
@@ -46,8 +57,8 @@ function pickCashNote (bill, cash) {
 }
 
 function buttonCashHandler () {
-    checkBill(billAmount.value);
-    checkMoneyReceived(billAmount.value, moneyReceived.value);    
+    checkBill(Number(billAmount.value));
+    checkMoneyReceived(Number(billAmount.value), Number(moneyReceived.value));    
 };
 
 
