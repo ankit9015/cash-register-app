@@ -20,6 +20,7 @@ function checkBill (billValue) {
 function checkMoneyReceived (billValue, moneyReceived) {
     if (moneyReceived > 0 && billValue > 0) {
         if (moneyReceived > billValue) {
+            refreshTable()
             pickCashNote (billValue, moneyReceived);
             getMessage("");
         } else if (moneyReceived === billValue) {
